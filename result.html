@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фінал — SCHOOL SURVIVAL 28</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="result-page">
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="https://28.te.ua/templates/app/images/icons/logo-palax.png" alt="Логотип ліцею 28">
+            <span>SCHOOL SURVIVAL 28</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="floors.html">Рівні</a>
+            <a href="result.html">Фінал</a>
+        </nav>
+    </header>
+
+    <main class="result-container">
+        <div class="result-card">
+            <p class="small-label">КІНЕЦЬ ГРИ</p>
+
+            <div id="result-icon" class="result-icon">🏆</div>
+
+            <h1 id="result-title">ТИ ВИЖИВ!</h1>
+
+            <p id="result-description">
+                Ти пройшов усі три поверхи та довів, що готовий до всього.
+            </p>
+
+            <div class="final-stats">
+                <div>
+                    <span class="stat-number" id="final-lives">3</span>
+                    <span class="stat-label">ЖИТТЯ ЗАЛИШИЛОСЯ</span>
+                </div>
+
+                <div>
+                    <span class="stat-number" id="final-floors">3</span>
+                    <span class="stat-label">ПОВЕРХИ ПРОЙДЕНО</span>
+                </div>
+            </div>
+
+            <button class="main-button" onclick="resetGame()">
+                СПРОБУВАТИ ЩЕ РАЗ ↻
+            </button>
+
+            <a href="index.html" class="back-link">ПОВЕРНУТИСЯ НА ГОЛОВНУ</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>SCHOOL SURVIVAL 28 © 2026 | Ти це зробив!</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>

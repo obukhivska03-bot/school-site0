@@ -1,0 +1,632 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #10131d;
+    --dark-card: #191e2b;
+    --white: #ffffff;
+    --muted: #aab0c0;
+    --accent: #f5c542;
+    --red: #ff5757;
+    --green: #53d68a;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    min-height: 75px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #151a27;
+    border-bottom: 1px solid #303747;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+    background: white;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #c3c8d5;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* ГОЛОВНА СТОРІНКА */
+
+.hero {
+    min-height: 620px;
+    padding: 75px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 40%, #28334e 0, transparent 35%),
+        linear-gradient(135deg, #10131d, #1b2335);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-label {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 90px);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -4px;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero-description {
+    max-width: 480px;
+    margin: 28px 0;
+    color: #c4cada;
+    font-size: 16px;
+}
+
+.game-info {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    min-width: 95px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    background: #222a3c;
+    border: 1px solid #374158;
+    border-radius: 12px;
+    text-align: center;
+    color: #c5cad7;
+    font-size: 11px;
+}
+
+.info-number {
+    color: var(--accent);
+    font-size: 27px;
+    font-weight: 900;
+}
+
+.main-button {
+    border: none;
+    border-radius: 9px;
+    padding: 17px 29px;
+    background: var(--accent);
+    color: #171717;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    background: #ffda65;
+}
+
+.hint {
+    color: #828a9e;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+.hero-decoration {
+    position: relative;
+    text-align: center;
+    transform: rotate(-5deg);
+}
+
+.big-number {
+    color: transparent;
+    -webkit-text-stroke: 5px var(--accent);
+    font-size: clamp(140px, 25vw, 300px);
+    line-height: 1;
+    font-weight: 900;
+}
+
+.decoration-text {
+    color: #d5d9e3;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-top: -15px;
+}
+
+.about-section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.about-section h2,
+.rules-box h2 {
+    font-size: 27px;
+    font-weight: 900;
+    margin-bottom: 35px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-card {
+    padding: 30px 22px;
+    background: var(--dark-card);
+    border: 1px solid #303747;
+    border-radius: 15px;
+}
+
+.about-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* СТОРІНКА РІВНІВ */
+
+.levels-container {
+    width: min(1000px, 90%);
+    margin: 0 auto;
+    padding: 55px 0;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-heading h1 {
+    font-size: clamp(32px, 6vw, 55px);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.page-heading h1 span {
+    color: var(--accent);
+}
+
+.page-heading p:last-child {
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+.status-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 25px;
+    margin-bottom: 35px;
+    background: #202738;
+    border: 1px solid #374158;
+    border-radius: 12px;
+}
+
+.status-title {
+    display: block;
+    color: #aab2c4;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+}
+
+.lives {
+    font-size: 23px;
+    letter-spacing: 4px;
+}
+
+.progress-number {
+    color: var(--accent);
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.floor-card {
+    padding: 30px;
+    margin-bottom: 30px;
+    background: var(--dark-card);
+    border: 1px solid #303747;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+.floor-one {
+    border-top: 5px solid var(--red);
+}
+
+.floor-two {
+    border-top: 5px solid var(--accent);
+}
+
+.floor-three {
+    border-top: 5px solid var(--green);
+}
+
+.floor-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.floor-number {
+    color: #737e95;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.danger {
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.danger-high {
+    background: #572a32;
+    color: #ff8585;
+}
+
+.danger-medium {
+    background: #514523;
+    color: #ffdc73;
+}
+
+.danger-low {
+    background: #214c3a;
+    color: #7ce5a9;
+}
+
+.floor-card h2 {
+    font-size: 29px;
+    font-weight: 900;
+}
+
+.floor-subtitle {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.floor-image {
+    min-height: 145px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.floor-image span {
+    font-size: 48px;
+}
+
+.floor-image p {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.image-red {
+    background: linear-gradient(135deg, #6c2936, #a43c48);
+}
+
+.image-yellow {
+    background: linear-gradient(135deg, #625023, #b38b30);
+}
+
+.image-green {
+    background: linear-gradient(135deg, #20523e, #398b61);
+}
+
+.floor-card > p:not(.floor-subtitle) {
+    color: #c0c7d5;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.floor-card h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.floor-card ul {
+    padding-left: 22px;
+    color: #b8c0cf;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.floor-card li {
+    margin-bottom: 8px;
+}
+
+.event-button,
+.complete-button {
+    border: none;
+    border-radius: 8px;
+    padding: 13px 18px;
+    margin: 5px 7px 5px 0;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.event-button {
+    color: white;
+    background: #39465e;
+}
+
+.event-button:hover {
+    background: #526483;
+}
+
+.complete-button {
+    color: #151515;
+    background: var(--accent);
+}
+
+.complete-button:hover {
+    background: #ffda65;
+    transform: translateY(-2px);
+}
+
+.event-result {
+    display: none;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 9px;
+    background: #252e40;
+    border-left: 4px solid var(--accent);
+    color: #e4e8f0;
+    font-size: 13px;
+}
+
+.event-result.visible {
+    display: block;
+}
+
+.rules-box {
+    padding: 30px;
+    margin-top: 40px;
+    background: #202738;
+    border-radius: 15px;
+    border: 1px solid #374158;
+}
+
+.rules-box h2 {
+    margin-bottom: 15px;
+}
+
+.rules-box p {
+    color: #c2c9d7;
+    font-size: 13px;
+    margin: 9px 0;
+}
+
+/* ФІНАЛЬНА СТОРІНКА */
+
+.result-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at center, #26344e 0, #10131d 65%);
+}
+
+.result-container {
+    min-height: 75vh;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-card {
+    width: min(600px, 100%);
+    padding: 45px 35px;
+    text-align: center;
+    background: #1b2333;
+    border: 1px solid #39445a;
+    border-radius: 20px;
+    box-shadow: 0 20px 70px #00000055;
+}
+
+.result-icon {
+    font-size: 75px;
+    margin: 15px 0;
+}
+
+.result-card h1 {
+    font-size: clamp(30px, 7vw, 48px);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.result-card > p:not(.small-label) {
+    color: #bdc6d6;
+    font-size: 14px;
+}
+
+.final-stats {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin: 35px 0;
+}
+
+.final-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    color: var(--accent);
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.stat-label {
+    color: #9ea8ba;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    color: #aab4c7;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px 15px;
+    text-align: center;
+    color: #737e92;
+    font-size: 10px;
+    border-top: 1px solid #293143;
+}
+
+/* МОБІЛЬНА ВЕРСІЯ */
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 17px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 65px 7%;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .game-info {
+        justify-content: center;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .status-panel {
+        padding: 15px;
+    }
+
+    .floor-card {
+        padding: 20px;
+    }
+
+    .floor-card h2 {
+        font-size: 24px;
+    }
+
+    .final-stats {
+        gap: 25px;
+    }
+
+    .result-card {
+        padding: 35px 20px;
+    }
+}

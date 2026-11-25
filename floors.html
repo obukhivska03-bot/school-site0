@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рівні — SCHOOL SURVIVAL 28</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="https://28.te.ua/templates/app/images/icons/logo-palax.png" alt="Логотип ліцею 28">
+            <span>SCHOOL SURVIVAL 28</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="floors.html">Рівні</a>
+            <a href="result.html">Фінал</a>
+        </nav>
+    </header>
+
+    <main class="levels-container">
+
+        <div class="page-heading">
+            <p class="small-label">ГРА ПОЧАЛАСЯ</p>
+            <h1>ОБЕРИ СВІЙ <span>РІВЕНЬ</span></h1>
+            <p>Твоє завдання — пройти всі три поверхи та зберегти життя.</p>
+        </div>
+
+        <div class="status-panel">
+            <div>
+                <span class="status-title">ТВОЇ ЖИТТЯ</span>
+                <div id="lives" class="lives">❤️ ❤️ ❤️</div>
+            </div>
+
+            <div>
+                <span class="status-title">ПРОЙДЕНО ПОВЕРХІВ</span>
+                <div id="progress" class="progress-number">0 / 3</div>
+            </div>
+        </div>
+
+        <section class="floor-card floor-one">
+            <div class="floor-top">
+                <span class="floor-number">01</span>
+                <span class="danger danger-high">ВИСОКИЙ РІВЕНЬ НЕБЕЗПЕКИ</span>
+            </div>
+
+            <h2>ПЕРШИЙ ПОВЕРХ</h2>
+            <p class="floor-subtitle">Тут починається справжнє випробування.</p>
+
+            <div class="floor-image image-red">
+                <span>🏫</span>
+                <p>THE CHAOS ZONE</p>
+            </div>
+
+            <p>
+                Найбільш людний поверх. Тут розташовані адміністрація,
+                рецепція, гардеробна, їдальня, хол та навчальні кабінети.
+                Здається, що тут є все. І навіть трохи більше, ніж потрібно.
+            </p>
+
+            <h3>Можливі події:</h3>
+            <ul>
+                <li>Зустріч із дирекцією — перевірка твоєї удачі.</li>
+                <li>Черга в їдальні — випробування терпіння.</li>
+                <li>Кабінет Ольги Григорівни — несподіваний рівень складності.</li>
+                <li>Біля актової зали можна випадково потрапити на проєкт.</li>
+                <li>А якщо пощастить — можна встигнути поїсти.</li>
+            </ul>
+
+            <button class="event-button" onclick="randomEvent(1)">
+                ВИПАДКОВА ПОДІЯ
+            </button>
+
+            <div id="event-1" class="event-result">
+                Тут з'явиться результат події.
+            </div>
+
+            <button class="complete-button" onclick="completeFloor(1)">
+                ПРОЙТИ ПОВЕРХ →
+            </button>
+        </section>
+
+        <section class="floor-card floor-two">
+            <div class="floor-top">
+                <span class="floor-number">02</span>
+                <span class="danger danger-medium">СЕРЕДНІЙ РІВЕНЬ НЕБЕЗПЕКИ</span>
+            </div>
+
+            <h2>ДРУГИЙ ПОВЕРХ</h2>
+            <p class="floor-subtitle">Тут ще можна відволіктися від навчання.</p>
+
+            <div class="floor-image image-yellow">
+                <span>🏓</span>
+                <p>THE GAME ZONE</p>
+            </div>
+
+            <p>
+                Звичайні навчальні кабінети, знайомі коридори та тенісний стіл.
+                Начебто нічого особливого, але ніколи не знаєш, чим закінчиться
+                звичайна перерва.
+            </p>
+
+            <h3>Можливі події:</h3>
+            <ul>
+                <li>Побачив тенісний стіл — і вже граєш.</li>
+                <li>Зустрів знайомих — перерва стала цікавішою.</li>
+                <li>Згадав про урок — час повертатися до кабінету.</li>
+            </ul>
+
+            <button class="event-button" onclick="randomEvent(2)">
+                ВИПАДКОВА ПОДІЯ
+            </button>
+
+            <div id="event-2" class="event-result">
+                Тут з'явиться результат події.
+            </div>
+
+            <button class="complete-button" onclick="completeFloor(2)">
+                ПРОЙТИ ПОВЕРХ →
+            </button>
+        </section>
+
+        <section class="floor-card floor-three">
+            <div class="floor-top">
+                <span class="floor-number">03</span>
+                <span class="danger danger-low">НИЗЬКИЙ РІВЕНЬ НЕБЕЗПЕКИ</span>
+            </div>
+
+            <h2>ТРЕТІЙ ПОВЕРХ</h2>
+            <p class="floor-subtitle">Нарешті можна трохи видихнути.</p>
+
+            <div class="floor-image image-green">
+                <span>📚</span>
+                <p>THE SAFE ZONE</p>
+            </div>
+
+            <p>
+                Найспокійніший поверх школи. Тут розташовані звичайні навчальні
+                кабінети та стійка з книжками, де можна знайти щось цікаве
+                для читання. Єдина проблема — сюди ще треба дійти.
+            </p>
+
+            <h3>Можливі події:</h3>
+            <ul>
+                <li>Знайшов цікаву книжку — отримав бонус до настрою.</li>
+                <li>Тихий коридор — рідкісна можливість відпочити.</li>
+                <li>Підйом на третій поверх — маленьке випробування витривалості.</li>
+            </ul>
+
+            <button class="event-button" onclick="randomEvent(3)">
+                ВИПАДКОВА ПОДІЯ
+            </button>
+
+            <div id="event-3" class="event-result">
+                Тут з'явиться результат події.
+            </div>
+
+            <button class="complete-button" onclick="completeFloor(3)">
+                ЗАВЕРШИТИ ГРУ →
+            </button>
+        </section>
+
+        <div class="rules-box">
+            <h2>ПРАВИЛА ГРИ</h2>
+            <p>❤️ На початку в тебе є три життя.</p>
+            <p>🎲 На кожному поверсі можна отримати випадкову подію.</p>
+            <p>⭐ Деякі події забирають життя, інші можуть його повернути.</p>
+            <p>🏆 Пройди всі три поверхи, щоб перемогти.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>SCHOOL SURVIVAL 28 © 2026</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>
